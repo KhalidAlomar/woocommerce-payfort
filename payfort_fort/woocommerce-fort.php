@@ -510,14 +510,14 @@ endif;
             
             if ($this->enable_sadad == "yes"){
                 echo preg_replace('/^\s+|\n|\r|\s+$/m', '','<script>
-                        jQuery(".payment_method_payfort").eq(0).after(\'
+                        jQuery(".payment_method_payfort").eq(0).before(\'
                         <li class="payment_method_payfort">
                             <input id="payment_method_payfort" data-method="SADAD" type="radio" class="input-radio" name="payment_method" value="payfort" data-order_button_text="">
                             <label onclick="setTimeout(function(){jQuery(\\\'[data-method=SADAD]\\\').click().focus();},100)" for="payment_method_payfort">
-                                '.__( 'SADAD', 'payfort_fort').' <img src="'. get_site_url(). '/wp-content/plugins/payfort_fort/assets/images/SADAD-logo.png" alt="SADAD">
+                                '.__( 'SADAD | سداد', 'payfort_fort').' <img src="'. get_site_url(). '/wp-content/plugins/payfort_fort/assets/images/SADAD-logo.png" alt="SADAD">
                             </label>
                             <div class="payment_box payment_method_payfort">
-                                <p>'.__( 'Pay for your items with using SADAD payment method', 'payfort_fort').'</p>
+                                <p>'.__( 'أدفع بشكل آمن بواسطة حسابك في سداد', 'payfort_fort').'</p>
                             </div>
                         </li>\');
                     </script>');
